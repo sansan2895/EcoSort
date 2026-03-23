@@ -34,6 +34,12 @@ function Dashboard() {
 
   useEffect(() => {
     const savedPoints = localStorage.getItem("points");
+    const user = localStorage.getItem("loginUser");
+
+    if (user) {
+      const data = JSON.parse(user);
+      setUserName(data.nama);
+    }
 
     if (savedPoints === null) {
       localStorage.setItem("points", JSON.stringify(3500));
