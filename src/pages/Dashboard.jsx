@@ -34,10 +34,17 @@ function Dashboard() {
 
   useEffect(() => {
     const savedPoints = localStorage.getItem("points");
+    const user = localStorage.getItem("loginUser");
+
+    if (user) {
+      const data = JSON.parse(user);
+      setUserName(data.nama);
+    }
 
     if (savedPoints === null) {
       localStorage.setItem("points", JSON.stringify(3500));
       setPoints(3500);
+
     } else {
       setPoints(JSON.parse(savedPoints));
     }
@@ -67,7 +74,7 @@ function Dashboard() {
 
             <p className="mt-2 text-lg">
               Selamat datang kembali,{" "}
-              <span className="text-green-300 font-semibold">
+              <span className="text-green-700 font-semibold">
                 {userName}
               </span>
             </p>

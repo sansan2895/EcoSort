@@ -39,7 +39,6 @@ function Navbar() {
     { to: "/reward", label: "Reward" },
     { to: "/about", label: "About" },
     { to: "/contact", label: "Contact" },
-    { to: "/content", label: "Content" },
   ];
 
   // klik luar → dropdown hilang
