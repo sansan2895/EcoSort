@@ -73,7 +73,7 @@ function Dashboard() {
 
             <p className="mt-2 text-lg">
               Selamat datang kembali,{" "}
-              <span className="text-green-300 font-semibold">
+              <span className="text-green-600 font-semibold">
                 {userName}
               </span>
             </p>
